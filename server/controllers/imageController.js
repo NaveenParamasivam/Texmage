@@ -18,7 +18,7 @@ const generateImage = async (req,res)=>{
 //   const formData = new FormData()
 //   formData.append('prompt',prompt)
 
-  const {data} = await axios.post('https://api-inference.huggingface.co/models/strangerzonehf/Flux-Midjourney-Mix2-LoRA',
+  const {data} = await axios.post(process.env.IMAGE_GENERATOR_URL,
     prompt,
     {
         headers: {
